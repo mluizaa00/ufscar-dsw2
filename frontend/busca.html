@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar hospedagem · Hospetagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-fundo text-texto pb-20 md:pb-0">
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+      <a href="busca.html" class="text-xl md:text-2xl font-extrabold text-primaria">🐾 Hospetagem</a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-500">
+        <a href="busca.html" class="text-primaria">Buscar</a>
+        <a href="pets.html" class="hover:text-primaria">Pets</a>
+        <a href="reservas.html" class="hover:text-primaria">Reservas</a>
+        <a href="perfil.html" class="w-10 h-10 rounded-full bg-primaria-clara text-primaria font-bold flex items-center justify-center">AC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-6">
+    <section class="mb-6">
+      <p class="text-sm text-gray-500 font-semibold">📍 São Carlos, SP · raio de 10 km</p>
+      <h1 class="text-2xl md:text-3xl font-extrabold mt-1">Encontre um lar temporário para seu pet</h1>
+
+      <div class="mt-4 flex gap-2">
+        <input type="text" placeholder="Buscar por bairro ou nome" class="campo">
+        <button class="botao-primario whitespace-nowrap">🔍<span class="hidden sm:inline ml-2">Buscar</span></button>
+      </div>
+
+      <div class="flex gap-2 mt-4 overflow-x-auto pb-1 lg:hidden">
+        <button class="shrink-0 px-4 py-2 rounded-full bg-primaria text-white font-semibold text-sm">🐶 Cães</button>
+        <button class="shrink-0 px-4 py-2 rounded-full bg-white border border-gray-300 font-semibold text-sm">🐱 Gatos</button>
+        <button class="shrink-0 px-4 py-2 rounded-full bg-white border border-gray-300 font-semibold text-sm">💰 Preço</button>
+        <button class="shrink-0 px-4 py-2 rounded-full bg-white border border-gray-300 font-semibold text-sm">📅 Datas</button>
+        <button class="shrink-0 px-4 py-2 rounded-full bg-white border border-gray-300 font-semibold text-sm">📏 Porte</button>
+      </div>
+    </section>
+
+    <div class="lg:grid lg:grid-cols-[260px_1fr] lg:gap-8">
+      <aside class="hidden lg:block cartao p-5 h-fit sticky top-24">
+        <h2 class="font-extrabold text-lg mb-4">Filtros</h2>
+
+        <p class="rotulo">Tipo de pet</p>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" checked class="accent-primaria"> Cães</label>
+        <label class="flex items-center gap-2 mb-4"><input type="checkbox" class="accent-primaria"> Gatos</label>
+
+        <p class="rotulo">Porte</p>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" class="accent-primaria"> Pequeno</label>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" checked class="accent-primaria"> Médio</label>
+        <label class="flex items-center gap-2 mb-4"><input type="checkbox" class="accent-primaria"> Grande</label>
+
+        <label for="checkin" class="rotulo">Check-in</label>
+        <input id="checkin" type="date" class="campo mb-3">
+        <label for="checkout" class="rotulo">Check-out</label>
+        <input id="checkout" type="date" class="campo mb-4">
+
+        <label for="preco" class="rotulo">Preço máximo: R$ 60/noite</label>
+        <input id="preco" type="range" min="20" max="100" value="60" class="w-full accent-primaria mb-4">
+
+        <label for="raio" class="rotulo">Distância</label>
+        <select id="raio" class="campo mb-5">
+          <option>Até 5 km</option>
+          <option selected>Até 10 km</option>
+          <option>Até 20 km</option>
+        </select>
+
+        <button class="botao-primario w-full">Aplicar filtros</button>
+      </aside>
+
+      <section>
+        <p class="text-sm text-gray-500 mb-4"><strong class="text-texto">6 hospedagens</strong> encontradas perto de você</p>
+
+        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-secundaria-clara flex items-center justify-center text-6xl">🏡</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Casa da Marina</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 4.8 <span class="text-gray-400 font-semibold">(32)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">2,3 km · aceita cães e gatos</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 45</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-primaria-clara flex items-center justify-center text-6xl">🌳</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Sítio do Renato</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 4.6 <span class="text-gray-400 font-semibold">(18)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">5,1 km · porte grande ok</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 38</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-sky-100 flex items-center justify-center text-6xl">🏢</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Apê da Júlia</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 4.9 <span class="text-gray-400 font-semibold">(25)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">1,2 km · somente gatos</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 40</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-amber-100 flex items-center justify-center text-6xl">🏠</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Casa do Pedro</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 4.5 <span class="text-gray-400 font-semibold">(12)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">3,8 km · cães de porte pequeno</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 35</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-lime-100 flex items-center justify-center text-6xl">🌻</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Chácara Bela Vista</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 4.7 <span class="text-gray-400 font-semibold">(40)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">8,4 km · cães de todos os portes</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 55</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+
+          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+            <div class="h-40 bg-rose-100 flex items-center justify-center text-6xl">🏘️</div>
+            <div class="p-4">
+              <div class="flex justify-between items-start gap-2">
+                <h3 class="font-bold text-lg">Casa da Dona Lúcia</h3>
+                <span class="text-sm font-bold whitespace-nowrap"><span class="text-secundaria">★</span> 5.0 <span class="text-gray-400 font-semibold">(9)</span></span>
+              </div>
+              <p class="text-sm text-gray-500">4,0 km · cuida de pets idosos</p>
+              <p class="mt-3"><span class="text-xl font-extrabold text-primaria">R$ 50</span> <span class="text-sm text-gray-500">/noite</span></p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 grid grid-cols-4 z-20">
+    <a href="busca.html" class="flex flex-col items-center py-2 text-xs font-bold text-primaria"><span class="text-xl">🔍</span>Buscar</a>
+    <a href="pets.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">🐶</span>Pets</a>
+    <a href="reservas.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">📅</span>Reservas</a>
+    <a href="perfil.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">👤</span>Perfil</a>
+  </nav>
+</body>
+</html>

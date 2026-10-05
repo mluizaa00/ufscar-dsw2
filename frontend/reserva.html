@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar reserva · Hospetagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-fundo text-texto pb-20 md:pb-0">
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-20">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
+      <a href="busca.html" class="text-xl md:text-2xl font-extrabold text-primaria">🐾 Hospetagem</a>
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-500">
+        <a href="busca.html" class="text-primaria">Buscar</a>
+        <a href="pets.html" class="hover:text-primaria">Pets</a>
+        <a href="reservas.html" class="hover:text-primaria">Reservas</a>
+        <a href="perfil.html" class="w-10 h-10 rounded-full bg-primaria-clara text-primaria font-bold flex items-center justify-center">AC</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 md:px-6 py-6">
+    <a href="hospedagem.html" class="text-sm font-semibold text-primaria">← Voltar para a hospedagem</a>
+    <h1 class="text-2xl md:text-3xl font-extrabold mt-3">Confirmar reserva</h1>
+
+    <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_360px] lg:gap-8">
+      <div class="space-y-6">
+        <section class="cartao p-5">
+          <h2 class="font-extrabold text-lg mb-3">Qual pet vai se hospedar?</h2>
+          <div class="grid gap-3 sm:grid-cols-3">
+            <label class="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-3 cursor-pointer has-checked:border-primaria has-checked:bg-primaria-clara">
+              <input type="radio" name="pet" checked class="accent-primaria">
+              <span class="text-3xl">🐶</span>
+              <span>
+                <strong class="block">Thor</strong>
+                <span class="text-sm text-gray-500">Cão · médio</span>
+              </span>
+            </label>
+            <label class="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-3 cursor-pointer has-checked:border-primaria has-checked:bg-primaria-clara">
+              <input type="radio" name="pet" class="accent-primaria">
+              <span class="text-3xl">🐱</span>
+              <span>
+                <strong class="block">Mel</strong>
+                <span class="text-sm text-gray-500">Gata · pequena</span>
+              </span>
+            </label>
+            <label class="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-3 cursor-pointer has-checked:border-primaria has-checked:bg-primaria-clara">
+              <input type="radio" name="pet" class="accent-primaria">
+              <span class="text-3xl">🐕</span>
+              <span>
+                <strong class="block">Bob</strong>
+                <span class="text-sm text-gray-500">Cão · grande</span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section class="cartao p-5">
+          <h2 class="font-extrabold text-lg mb-3">Período</h2>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <div>
+              <label for="checkin" class="rotulo">Check-in</label>
+              <input id="checkin" type="date" value="2026-11-12" class="campo">
+            </div>
+            <div>
+              <label for="checkout" class="rotulo">Check-out</label>
+              <input id="checkout" type="date" value="2026-11-15" class="campo">
+            </div>
+          </div>
+          <p class="text-sm text-gray-500 mt-2">12 a 15 de novembro · 3 noites</p>
+        </section>
+
+        <section class="cartao p-5">
+          <h2 class="font-extrabold text-lg mb-3">Observações</h2>
+          <textarea rows="3" placeholder="Alguma observação especial? Ex.: alergias, horário da ração, remédios..." class="campo resize-none"></textarea>
+        </section>
+
+        <section class="cartao p-5">
+          <h2 class="font-extrabold text-lg mb-3">Forma de pagamento</h2>
+          <div class="grid gap-3 sm:grid-cols-2">
+            <label class="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-3 cursor-pointer has-checked:border-primaria has-checked:bg-primaria-clara">
+              <input type="radio" name="pagamento" checked class="accent-primaria">
+              <span class="text-2xl">⚡</span>
+              <span class="font-bold">Pix</span>
+            </label>
+            <label class="flex items-center gap-3 border-2 border-gray-200 rounded-xl p-3 cursor-pointer has-checked:border-primaria has-checked:bg-primaria-clara">
+              <input type="radio" name="pagamento" class="accent-primaria">
+              <span class="text-2xl">💳</span>
+              <span class="font-bold">Cartão de crédito</span>
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="cartao shadow-md p-5 lg:sticky lg:top-24">
+          <div class="flex gap-3 items-center pb-4 border-b border-gray-200">
+            <div class="w-16 h-16 shrink-0 rounded-xl bg-secundaria-clara flex items-center justify-center text-3xl">🏡</div>
+            <div>
+              <p class="font-extrabold">Casa da Marina</p>
+              <p class="text-sm text-gray-500"><span class="text-secundaria">★</span> 4.8 · 2,3 km</p>
+            </div>
+          </div>
+
+          <div class="space-y-2 text-gray-600 py-4">
+            <p class="flex justify-between"><span>Hospedagem (3 noites)</span><span>R$ 135</span></p>
+            <p class="flex justify-between"><span>Taxa da plataforma</span><span>R$ 12</span></p>
+          </div>
+
+          <p class="flex justify-between border-t border-gray-200 pt-4 text-lg font-extrabold">
+            <span>Total</span><span class="text-primaria">R$ 147</span>
+          </p>
+
+          <a href="pagamento.html" class="botao-primario block text-center mt-5">Confirmar e pagar</a>
+          <p class="text-xs text-center text-gray-400 mt-3">Pagamento simulado · nenhum valor é cobrado de verdade</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <nav class="md:hidden fixed bottom-0 inset-x-0 bg-white border-t border-gray-200 grid grid-cols-4 z-20">
+    <a href="busca.html" class="flex flex-col items-center py-2 text-xs font-bold text-primaria"><span class="text-xl">🔍</span>Buscar</a>
+    <a href="pets.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">🐶</span>Pets</a>
+    <a href="reservas.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">📅</span>Reservas</a>
+    <a href="perfil.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">👤</span>Perfil</a>
+  </nav>
+</body>
+</html>

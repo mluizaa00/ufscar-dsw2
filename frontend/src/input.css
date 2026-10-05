@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", sans-serif;
+  --color-primaria: #2e7d6b;
+  --color-primaria-escura: #1f5c4e;
+  --color-primaria-clara: #e3f2ee;
+  --color-secundaria: #f4a261;
+  --color-secundaria-clara: #fdf0e6;
+  --color-fundo: #f8faf9;
+  --color-texto: #1f2937;
+  --color-perigo: #dc2626;
+}
+
+@layer components {
+  .botao-primario {
+    @apply bg-primaria text-white font-bold rounded-xl px-5 py-3 hover:bg-primaria-escura transition;
+  }
+
+  .botao-secundario {
+    @apply border-2 border-primaria text-primaria font-bold rounded-xl px-5 py-3 hover:bg-primaria-clara transition;
+  }
+
+  .campo {
+    @apply w-full bg-white border border-gray-300 rounded-xl px-4 py-3 outline-none focus:border-primaria focus:ring-2 focus:ring-primaria-clara;
+  }
+
+  .rotulo {
+    @apply block text-sm font-bold mb-1;
+  }
+
+  .cartao {
+    @apply bg-white rounded-2xl shadow-sm;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta · Hospetagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-fundo text-texto">
+  <main class="min-h-screen md:grid md:grid-cols-2">
+    <section class="hidden md:flex flex-col justify-center bg-primaria text-white p-12">
+      <p class="text-3xl font-extrabold">🐾 Hospetagem</p>
+      <h1 class="text-4xl lg:text-5xl font-extrabold mt-8 leading-tight">Crie sua conta de tutor.</h1>
+      <ul class="mt-8 space-y-4 text-lg text-white/90">
+        <li>✅ Busque hospedagens perto de você</li>
+        <li>✅ Veja avaliações de outros tutores</li>
+        <li>✅ Reserve e pague em poucos cliques</li>
+      </ul>
+    </section>
+
+    <section class="flex items-center justify-center p-6 min-h-screen">
+      <div class="w-full max-w-lg">
+        <p class="md:hidden text-3xl font-extrabold text-primaria text-center mb-8">🐾 Hospetagem</p>
+
+        <a href="index.html" class="text-sm font-semibold text-primaria">← Voltar</a>
+        <h2 class="text-2xl font-extrabold mt-4">Criar conta</h2>
+        <p class="text-gray-500 mt-1">Leva menos de um minuto.</p>
+
+        <form class="mt-6 grid gap-4 sm:grid-cols-2">
+          <div class="sm:col-span-2">
+            <label for="nome" class="rotulo">Nome completo</label>
+            <input id="nome" type="text" placeholder="Ana Clara Ribeiro" class="campo">
+          </div>
+          <div class="sm:col-span-2">
+            <label for="email" class="rotulo">E-mail</label>
+            <input id="email" type="email" placeholder="voce@email.com" class="campo">
+          </div>
+          <div>
+            <label for="telefone" class="rotulo">Telefone</label>
+            <input id="telefone" type="tel" placeholder="(16) 99999-9999" class="campo">
+          </div>
+          <div>
+            <label for="cidade" class="rotulo">Cidade</label>
+            <input id="cidade" type="text" placeholder="São Carlos, SP" class="campo">
+          </div>
+          <div>
+            <label for="senha" class="rotulo">Senha</label>
+            <input id="senha" type="password" placeholder="Mínimo 6 caracteres" class="campo">
+          </div>
+          <div>
+            <label for="confirmar" class="rotulo">Confirmar senha</label>
+            <input id="confirmar" type="password" placeholder="Repita a senha" class="campo">
+          </div>
+          <label class="sm:col-span-2 flex items-start gap-2 text-sm text-gray-600">
+            <input type="checkbox" class="mt-1 accent-primaria">
+            Li e aceito os termos de uso da Hospetagem.
+          </label>
+          <a href="busca.html" class="botao-primario block text-center sm:col-span-2">Criar conta</a>
+        </form>
+
+        <p class="text-center text-sm mt-8 text-gray-500">
+          Já tem conta?
+          <a href="index.html" class="font-bold text-primaria">Entrar</a>
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
