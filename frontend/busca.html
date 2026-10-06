@@ -27,8 +27,8 @@
       <h1 class="text-2xl md:text-3xl font-extrabold mt-1">Encontre um lar temporário para seu pet</h1>
 
       <div class="mt-4 flex gap-2">
-        <input type="text" placeholder="Buscar por bairro ou nome" class="campo">
-        <button class="botao-primario whitespace-nowrap">🔍<span class="hidden sm:inline ml-2">Buscar</span></button>
+        <input id="busca" type="text" placeholder="Buscar por bairro ou nome" class="campo">
+        <button id="buscar" class="botao-primario whitespace-nowrap">🔍<span class="hidden sm:inline ml-2">Buscar</span></button>
       </div>
 
       <div class="flex gap-2 mt-4 overflow-x-auto pb-1 lg:hidden">
@@ -45,13 +45,13 @@
         <h2 class="font-extrabold text-lg mb-4">Filtros</h2>
 
         <p class="rotulo">Tipo de pet</p>
-        <label class="flex items-center gap-2 mb-1"><input type="checkbox" checked class="accent-primaria"> Cães</label>
-        <label class="flex items-center gap-2 mb-4"><input type="checkbox" class="accent-primaria"> Gatos</label>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" data-pet="cao" checked class="accent-primaria"> Cães</label>
+        <label class="flex items-center gap-2 mb-4"><input type="checkbox" data-pet="gato" class="accent-primaria"> Gatos</label>
 
         <p class="rotulo">Porte</p>
-        <label class="flex items-center gap-2 mb-1"><input type="checkbox" class="accent-primaria"> Pequeno</label>
-        <label class="flex items-center gap-2 mb-1"><input type="checkbox" checked class="accent-primaria"> Médio</label>
-        <label class="flex items-center gap-2 mb-4"><input type="checkbox" class="accent-primaria"> Grande</label>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" data-porte="pequeno" class="accent-primaria"> Pequeno</label>
+        <label class="flex items-center gap-2 mb-1"><input type="checkbox" data-porte="medio" checked class="accent-primaria"> Médio</label>
+        <label class="flex items-center gap-2 mb-4"><input type="checkbox" data-porte="grande" class="accent-primaria"> Grande</label>
 
         <label for="checkin" class="rotulo">Check-in</label>
         <input id="checkin" type="date" class="campo mb-3">
@@ -63,19 +63,19 @@
 
         <label for="raio" class="rotulo">Distância</label>
         <select id="raio" class="campo mb-5">
-          <option>Até 5 km</option>
-          <option selected>Até 10 km</option>
-          <option>Até 20 km</option>
+          <option value="5">Até 5 km</option>
+          <option value="10" selected>Até 10 km</option>
+          <option value="20">Até 20 km</option>
         </select>
 
-        <button class="botao-primario w-full">Aplicar filtros</button>
+        <button id="aplicar" class="botao-primario w-full">Aplicar filtros</button>
       </aside>
 
       <section>
-        <p class="text-sm text-gray-500 mb-4"><strong class="text-texto">6 hospedagens</strong> encontradas perto de você</p>
+        <p class="text-sm text-gray-500 mb-4"><strong id="contagem" class="text-texto">6 hospedagens</strong> encontradas perto de você</p>
 
-        <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+        <div id="lista" class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+          <a href="hospedagem.html" data-nome="Casa da Marina" data-preco="45" data-km="2.3" data-pets="cao gato" data-portes="pequeno medio grande" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-secundaria-clara flex items-center justify-center text-6xl">🏡</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -87,7 +87,7 @@
             </div>
           </a>
 
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+          <a href="hospedagem.html" data-nome="Sítio do Renato" data-preco="38" data-km="5.1" data-pets="cao" data-portes="pequeno medio grande" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-primaria-clara flex items-center justify-center text-6xl">🌳</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -99,7 +99,7 @@
             </div>
           </a>
 
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+          <a href="hospedagem.html" data-nome="Apê da Júlia" data-preco="40" data-km="1.2" data-pets="gato" data-portes="pequeno medio grande" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-sky-100 flex items-center justify-center text-6xl">🏢</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -111,7 +111,7 @@
             </div>
           </a>
 
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+          <a href="hospedagem.html" data-nome="Casa do Pedro" data-preco="35" data-km="3.8" data-pets="cao" data-portes="pequeno" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-amber-100 flex items-center justify-center text-6xl">🏠</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -123,7 +123,7 @@
             </div>
           </a>
 
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+          <a href="hospedagem.html" data-nome="Chácara Bela Vista" data-preco="55" data-km="8.4" data-pets="cao" data-portes="pequeno medio grande" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-lime-100 flex items-center justify-center text-6xl">🌻</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -135,7 +135,7 @@
             </div>
           </a>
 
-          <a href="hospedagem.html" class="cartao overflow-hidden hover:shadow-md transition">
+          <a href="hospedagem.html" data-nome="Casa da Dona Lúcia" data-preco="50" data-km="4.0" data-pets="cao gato" data-portes="pequeno medio grande" class="cartao overflow-hidden hover:shadow-md transition">
             <div class="h-40 bg-rose-100 flex items-center justify-center text-6xl">🏘️</div>
             <div class="p-4">
               <div class="flex justify-between items-start gap-2">
@@ -157,5 +157,45 @@
     <a href="reservas.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">📅</span>Reservas</a>
     <a href="perfil.html" class="flex flex-col items-center py-2 text-xs font-semibold text-gray-500"><span class="text-xl">👤</span>Perfil</a>
   </nav>
+
+  <script>
+    const campoBusca = document.getElementById('busca');
+    const preco = document.getElementById('preco');
+    const raio = document.getElementById('raio');
+    const rotuloPreco = document.querySelector('label[for="preco"]');
+    const contagem = document.getElementById('contagem');
+    const cards = document.querySelectorAll('#lista > a');
+
+    function marcados(atributo) {
+      return [...document.querySelectorAll(`input[${atributo}]:checked`)].map(i => i.getAttribute(atributo));
+    }
+
+    function filtrar() {
+      const pets = marcados('data-pet');
+      const portes = marcados('data-porte');
+      const texto = campoBusca.value.trim().toLowerCase();
+      rotuloPreco.textContent = `Preço máximo: R$ ${preco.value}/noite`;
+
+      let total = 0;
+      cards.forEach(card => {
+        const d = card.dataset;
+        const visivel =
+          d.nome.toLowerCase().includes(texto) &&
+          Number(d.preco) <= Number(preco.value) &&
+          Number(d.km) <= Number(raio.value) &&
+          (!pets.length || pets.some(p => d.pets.split(' ').includes(p))) &&
+          (!portes.length || portes.some(p => d.portes.split(' ').includes(p)));
+        card.hidden = !visivel;
+        if (visivel) total++;
+      });
+      contagem.textContent = `${total} ${total === 1 ? 'hospedagem' : 'hospedagens'}`;
+    }
+
+    document.querySelectorAll('aside input, aside select').forEach(el => el.addEventListener('input', filtrar));
+    campoBusca.addEventListener('input', filtrar);
+    document.getElementById('buscar').addEventListener('click', filtrar);
+    document.getElementById('aplicar').addEventListener('click', filtrar);
+    filtrar();
+  </script>
 </body>
 </html>
