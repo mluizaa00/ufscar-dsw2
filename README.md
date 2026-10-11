@@ -1,15 +1,14 @@
-# Alunos
-Carlos RA: 
+# Alunos 
+Carlos Alberto Magalhaes Neto
 
-Maria Luiza Fernandes Prestes Cesar RA: 832374
+Maria Luiza Fernandes Prestes Cesar 
 
-Yasmin Victoria Oliveira RA: 812308 
+Yasmin Victoria Oliveira RA
 
 # 🐾 Hospetagem
 
-Site para tutores encontrarem alguém que hospede seu pet enquanto viajam.
-
-Projeto da fase 1 da disciplina Desenvolvimento de Software para Web 2 (UFSCar), feito com HTML e Tailwind CSS.
+Site para tutores encontrarem alguém que hospede seu pet enquanto viajam!
+Projeto da fase 1 (AA1) da disciplina Desenvolvimento de Software para Web 2 (UFSCar), feito com HTML e Tailwind CSS
 
 ## Como rodar
 
@@ -19,7 +18,7 @@ npm install
 npm run dev
 ```
 
-Depois é só abrir o `frontend/index.html` no navegador.
+Depois é só abrir o `frontend/index.html` no navegador
 
 ## Telas
 
