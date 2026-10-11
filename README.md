@@ -1,9 +1,11 @@
+Olá, Prof. Lucrédio! Seja bem-vindo. Reunimos aqui algumas orientações para execução do projeto
+
 # Alunos 
-Carlos Alberto Magalhaes Neto
 
-Maria Luiza Fernandes Prestes Cesar 
-
-Yasmin Victoria Oliveira RA
+Somos da turma da Sexta-feira:
+- Carlos Alberto Magalhaes Neto
+- Maria Luiza Fernandes Prestes Cesar 
+- Yasmin Victoria Oliveira
 
 # 🐾 Hospetagem
 
